@@ -12,13 +12,15 @@ STEPS:
 1. Download script in your Cloud Linux by following ways, 
 	* yum install git
 	* git clone https://github.com/MohamedIdris45/Basic-Setup.git
-
-
-2. Run the Script in root.
+	* cd Basic-Setup
+	* ./Basic.sh
+	
+2. Run the Script with root Permission.
 3. Wait for a while, Script will do all the basic setup for you (Patience is Recommanded).
 4. Script Install Below software
 	* Upgrade System
 	* Install firewall vim wget zip
+	* Assign the port number for SSH connectivity.
 5. Script Ask for Port number for SSH connectivity before type know the available port
 6. At the End it prompt for username and password, Provide the username and password
 7. After End of the script system start to reboot and connection will be disconnected.
