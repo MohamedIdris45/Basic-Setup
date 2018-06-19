@@ -9,7 +9,7 @@ echo "##########################################################################
 
 sleep 5s
 
-yum install update -y
+yum update -y
 yum install epel-release -y
 yum install firewalld vim wget bzip -y
 systemctl enable firewalld
