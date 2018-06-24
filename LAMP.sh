@@ -2,6 +2,7 @@
 
 echo"##################################################################################" 
 echo"##########################  INSTALLING LAMP IN CENTOS ############################"
+echo"#############  KINDLY READ LAMP.md TO GET KNOWLEDGE ABOUT THIS SCRIPT ############"
 echo"##################################################################################"
 
 yum install vim httpd mariadb-server mariadb php php-mysql php-fpm firewalld -y
@@ -28,3 +29,9 @@ mysql_secure_installation
 touch /var/www/html/info.php
 
 echo "<?php phpinfo(); ?>" >> /var/www/html/info.php
+
+echo"######################### END OF SCRIPT #################################"
+echo"######## IN YOUR WEB BROWSER CHECK WEB-SERVER AND PHP ARE WORKING FINE BY TYPING  #####"
+echo"####### http://youripaddress (for web-server) ################"
+echo"####### http://youripaddress/info.php ########################"
+echo"####### FEEDBACK CONTACT: mohamedidris45@yahoo.com ###########"
