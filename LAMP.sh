@@ -1,11 +1,12 @@
 #!/bin/bash
 
 
-#Install Requirment
+#Dependency check
 
 yum install lsb -y
 apt-get install lsb -y
 
+#OS check
 
 x="(lsb_release -i | cut -f 2-)"
 
@@ -54,7 +55,7 @@ if [ "$y" == "$z" ];then
 	echo"#################### FEEDBACK CONTACT mohamedidris45@yahoo.com ########################"
 	echo"#######################################################################################"
 	
-	else
+else
 	
 	echo"##################################################################################"
         echo"###################### WE HAVE DETECTED YOUR SYSTEM AS UBUNTU ####################"
