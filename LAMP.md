@@ -2,7 +2,7 @@ This is Simple Script to Install LAMP in Ubuntu & Redhat
 
 CAUTION:
 
-This Script has been Tested in Ubuntu and Redhat (rpm like CentOS,Fedora) packages using other then this will cause error in installation
+This Script has been Tested in Ubuntu and Redhat (rpm like CentOS,Fedora) packages using other then this will cause error in installation.
 
 STEPS:
 
