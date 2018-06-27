@@ -1,12 +1,12 @@
-This is Simple Script to Install LAMP in Centos 7
+This is Simple Script to Install LAMP in Ubuntu & Redhat 
 
 CAUTION:
 
-Installing this script other then (CentOS 7) RPM can cause Software Installation Fail.
+This Script has been Tested in Ubuntu and Redhat (rpm like CentOS,Fedora) packages using other then this will cause error in installation
 
 STEPS:
 
-1. In your Cloud (CentOS 7) or local System download the script using 
+1. In your Cloud or local System download the script using 
       * git clone https://github.com/MohamedIdris45/Basic-Setup.git
       * cd Basic-Setup
       * bash LAMP.sh (run as root)
@@ -14,6 +14,7 @@ STEPS:
 2. Software Installed and allowd in firewall
       * APACHE
       * Mariadb 
+      * mysql (for Ubuntu)
       * PHP
       
 3. Below 3306 port has been assigned for mariadb
