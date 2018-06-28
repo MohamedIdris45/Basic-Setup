@@ -68,7 +68,7 @@ else
 
 	apt-get update -y
 	apt-get install apache2 -y
-	apt-get install mysql-server
+	apt-get install mysql-server -y
 	apt-get install php libapache2-mod-php php-mcrypt php-mysql vim unzip zip wget bzip2 -y
 
 	#service
