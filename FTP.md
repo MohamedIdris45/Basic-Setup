@@ -2,6 +2,8 @@ Install and setup Secure FTP server in just running the script
 
 CAUTION:
 
+	* Run Basic.sh Script before running this script
+
 	* This script was tested in .RPM OS (Redhat, CentOS, Fedora) other then this cause error in installation
 
 	* This script install in both Active and Passive mode

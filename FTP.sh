@@ -1,9 +1,11 @@
 #!/bin/bash
 
 echo "################################################################################"
+echo "###############  RUN Basic.sh Script before running this Script ################"
 echo "######################  INSTALLING FTP IN CENTOS  ##############################"
 echo "################ READ FTP.md TO GET KNOWLEDGE ABOUT THIS SCRIPT ################"
 echo "################################################################################"
+
 
 yum install vsftpd -y
 
