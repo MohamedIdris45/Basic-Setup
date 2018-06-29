@@ -18,9 +18,7 @@ sed -i -e 's/anonymous_enable=YES/#anonymous_enable=YES/g' /etc/vsftpd/vsftpd.co
 sed -i -e 's/connect_from_port_20=YES/#connect_from_port_20=YES/g' /etc/vsftpd/vsftpd.conf
 echo "anonymous_enable=NO" >> /etc/vsftpd/vsftpd.conf
 
-echo "ENTER PORT NO FOR FTP: "
-read xyz
-
+read
 defa=1
 
 sum=`echo "$xyz + $defa"`
