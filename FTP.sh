@@ -18,12 +18,10 @@ sed -i -e 's/anonymous_enable=YES/#anonymous_enable=YES/g' /etc/vsftpd/vsftpd.co
 sed -i -e 's/connect_from_port_20=YES/#connect_from_port_20=YES/g' /etc/vsftpd/vsftpd.conf
 echo "anonymous_enable=NO" >> /etc/vsftpd/vsftpd.conf
 
-echo "ENTER PORT NO FOR FTP: "
-read xyz
+read -p "Enter Port No. : " xyz
 
-defa=1
-
-sum=`echo "$xyz + $defa" | bc`
+num=1
+sum=$(($xyz+$num))
 
 echo "listen_port=$xyz" >> /etc/vsftpd/vsftpd.conf
 echo "pasv_min_port=$xyz" >> /etc/vsftpd/vsftpd.conf
@@ -54,9 +52,11 @@ fi
 
 echo "$username" >> /etc/vsftpd/vsftpd.userlist
 
-semanage fcontext -a -t public_content_rw_t /home/$username/
+semanage boolean -m ftpd_full_access --on
 
 systemctl restart vsftpd
+
+
 
 firewall-cmd --permanent --add-port=$xyz/tcp
 firewall-cmd --permanent --add-port=$sum/tcp
