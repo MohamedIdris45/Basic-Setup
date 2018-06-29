@@ -23,7 +23,7 @@ read xyz
 
 defa=1
 
-sum=`echo "$xyz + $defa" | bc`
+sum=`echo "$xyz + $defa"`
 
 echo "listen_port=$xyz" >> /etc/vsftpd/vsftpd.conf
 echo "pasv_min_port=$xyz" >> /etc/vsftpd/vsftpd.conf
