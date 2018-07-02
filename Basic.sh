@@ -37,7 +37,7 @@ if [ "$yes" == "$x" ];then
 
 
 		sed -i -e 's/PermitRootLogin/#PermitRootLogin/g' /etc/ssh/sshd_config
-		echo "PermitRootLogin no" >> /etc/ssh/sshd_config
+		echo "PermitRootLogin No" >> /etc/ssh/sshd_config
 		echo "Port $abcd" >> /etc/ssh/sshd_config
 
 		firewall-cmd --permanent --add-port=$abcd/tcp
