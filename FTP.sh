@@ -4,16 +4,19 @@
 # Version : 1.2
 
 echo "################################################################################"
-echo "###############  RUN Basic.sh Script before running this Script ################"
 echo "######################  INSTALLING FTP IN CENTOS  ##############################"
 echo "################ READ FTP.md TO GET KNOWLEDGE ABOUT THIS SCRIPT ################"
 echo "################################################################################"
 
-
+yum install firewalld -y
 yum install vsftpd -y
 
+systemctl start firewalld
+systemctl enable firewalld
 systemctl start vsftpd
 systemctl enable vsftpd
+
+
 
 cp /etc/vsftpd/vsftpd.conf /etc/vsftpd/vsftpd.conf.orig
 
