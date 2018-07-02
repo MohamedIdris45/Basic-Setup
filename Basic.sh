@@ -75,7 +75,7 @@ if [ "$yes" == "$x" ];then
 
 	echo "##########################################################################################################################"
 	echo "########################################  System will restart in 15 Seconds ##############################################"
-	echo "###################  Log in using your Username and Password that you provided and the Port you allowd for ssh ###########"
+	echo "###################  Log in using your Username and Password that you provided and the Port you allowed for ssh ###########"
 	echo "#######################################  ssh username@IPaddress -p 'port' ################################################"
 	echo "##########################################################################################################################"
 	echo "################################### FEEDBACK CONTACT: mohamedidris45@yahoo.com ###########################################"

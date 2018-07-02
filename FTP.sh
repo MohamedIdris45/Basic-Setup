@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Authour : Mohamed Idris
-# Version : 1.1
+# Version : 1.2
 
 echo "################################################################################"
 echo "###############  RUN Basic.sh Script before running this Script ################"
@@ -21,20 +21,39 @@ sed -i -e 's/anonymous_enable=YES/#anonymous_enable=YES/g' /etc/vsftpd/vsftpd.co
 sed -i -e 's/connect_from_port_20=YES/#connect_from_port_20=YES/g' /etc/vsftpd/vsftpd.conf
 echo "anonymous_enable=NO" >> /etc/vsftpd/vsftpd.conf
 
-read -p "Enter Port No. : " xyz
+	while :
 
-num=1
-sum=$(($xyz+$num))
+	do
 
-echo "listen_port=$xyz" >> /etc/vsftpd/vsftpd.conf
-echo "pasv_min_port=$xyz" >> /etc/vsftpd/vsftpd.conf
-echo "pasv_max_port=$sum">> /etc/vsftpd/vsftpd.conf
-echo "userlist_file=/etc/vsftpd/vsftpd.userlist" >> /etc/vsftpd/vsftpd.conf
-echo "userlist_deny=NO" >> /etc/vsftpd/vsftpd.conf
-echo "chroot_local_user=YES
-allow_writeable_chroot=YES" >> /etc/vsftpd/vsftpd.conf
 
-touch /etc/vsftpd/vsftpd.userlist
+		read -p "Enter Port No. : " xyz
+
+		var="$xyz"
+
+		if [ -n "$var" ]; then
+
+		num=1
+		sum=$(($xyz+$num))
+
+		echo "listen_port=$xyz" >> /etc/vsftpd/vsftpd.conf
+		echo "pasv_min_port=$xyz" >> /etc/vsftpd/vsftpd.conf
+		echo "pasv_max_port=$sum">> /etc/vsftpd/vsftpd.conf
+		echo "userlist_file=/etc/vsftpd/vsftpd.userlist" >> /etc/vsftpd/vsftpd.conf
+		echo "userlist_deny=NO" >> /etc/vsftpd/vsftpd.conf
+		echo "chroot_local_user=YES" >> /etc/vsftpd/vsftpd.conf
+		echo "allow_writeable_chroot=YES" >> /etc/vsftpd/vsftpd.conf
+
+		touch /etc/vsftpd/vsftpd.userlist
+
+	break
+
+		else
+	
+		echo "##############  Kindly Enter PORT NO.  #################"
+
+		fi
+
+	done
 
 if [ $(id -u) -eq 0 ]; then
         read -p "Enter username : " username
