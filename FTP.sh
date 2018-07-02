@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Authour : Mohamed Idris
+# Version : 1.1
+
 echo "################################################################################"
 echo "###############  RUN Basic.sh Script before running this Script ################"
 echo "######################  INSTALLING FTP IN CENTOS  ##############################"
@@ -67,15 +70,6 @@ echo "##########################################################################
 echo "########################  FTP HAS BEEN INSTALLED SUCCESSFULLY ##############################"
 echo "######## CONNECT FTP USING USERNAME AND PASSWORD YOU PRIVIDED ALONG WITH PORT NUMBER #######"
 echo "############################################################################################"
-
-
-
-
-
-
-
-
-
 
 
 
