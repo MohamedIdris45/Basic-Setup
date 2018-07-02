@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Authour : Mohamed Idris
-# Version : 1.1
+# Version : 1.2
 
 #install basic software
 
@@ -27,19 +27,32 @@ if [ "$yes" == "$x" ];then
 	systemctl enable firewalld
 	systemctl start firewalld
 
-	echo "Type the Port number for SSH and Press [ENTER]:"
+	while :
+	do
+		read -p "ENTER PORT NUMBER FOR SSH : " abcd
 
-	read abcd
+		var="$abcd"
+
+		if [ -n "$var" ]; then
 
 
-	sed -i -e 's/PermitRootLogin/#PermitRootLogin/g' /etc/ssh/sshd_config
-	echo "PermitRootLogin no" >> /etc/ssh/sshd_config
-	echo "Port $abcd" >> /etc/ssh/sshd_config
+		sed -i -e 's/PermitRootLogin/#PermitRootLogin/g' /etc/ssh/sshd_config
+		echo "PermitRootLogin no" >> /etc/ssh/sshd_config
+		echo "Port $abcd" >> /etc/ssh/sshd_config
 
-	firewall-cmd --permanent --add-port=$abcd/tcp
-	firewall-cmd --reload
-	semanage port -a -t ssh_port_t -p tcp $abcd
-	systemctl restart sshd
+		firewall-cmd --permanent --add-port=$abcd/tcp
+		firewall-cmd --reload
+		semanage port -a -t ssh_port_t -p tcp $abcd
+		systemctl restart sshd
+		
+		break
+
+	else 
+		echo "########## KINDLY ENTER PORT NUMBER  ############"
+
+	fi
+
+	done
 
 	echo "Kindly Enter the Details to Create User"
 
