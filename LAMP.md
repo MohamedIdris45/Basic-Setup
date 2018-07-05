@@ -13,7 +13,8 @@ STEPS:
       
 2. Software Installed and allowd in firewall
       * APACHE
-      * Mariadb 
+      * Mariadb for .rpm distros
+      * Mysql for ubuntu distros
       * mysql (for Ubuntu)
       * PHP
       
