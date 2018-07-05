@@ -36,8 +36,8 @@ if [ "$yes" == "$x" ];then
 	
 	while :
 	do
-
-		echo "#############  ENTER YOU WEBSITE NAME WITHOUT WWW & .COM  ##############"
+		echo ""
+		echo "#############  ENTER YOU WEBSITE NAME WITHOUT (WWW & .COM)  ##############"
 		echo ""
 
 		read -p "Enter your Website name without [www] & [.com]: " web
@@ -93,7 +93,7 @@ if [ "$yes" == "$x" ];then
 
 		else
 			
-			echo "############## ENTER YOU WEBSITE NAME WITHOUT WWW & .COM  ############"
+			echo ""
 
 		fi
 	
