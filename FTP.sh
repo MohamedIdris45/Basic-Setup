@@ -1,15 +1,24 @@
 #!/bin/bash
 
-# Authour : Mohamed Idris
-# Version : 1.2
+# AUTHOR : Mohamed Idris
+# VERSION : 1.2v
+# CONTACT : mohamedidris45@yahoo.com
+
 
 echo "################################################################################"
 echo "######################  INSTALLING FTP IN CENTOS  ##############################"
 echo "################ READ FTP.md TO GET KNOWLEDGE ABOUT THIS SCRIPT ################"
 echo "################################################################################"
 
+#installing dependancy
+
 yum install firewalld -y
+
+#installing ftp
+
 yum install vsftpd -y
+
+#starting ftp
 
 systemctl start firewalld
 systemctl enable firewalld

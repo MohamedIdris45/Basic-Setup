@@ -13,7 +13,7 @@ STEPS:
 	* yum install git
 	* git clone https://github.com/MohamedIdris45/Basic-Setup.git
 	* cd Basic-Setup
-	* ./Basic.sh
+	* bash Basic.sh (with root)
 	
 2. Run the Script with root Permission.
 

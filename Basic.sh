@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# Authour : Mohamed Idris
-# Version : 1.2
+# AUTHOR : Mohamed Idris
+# VERSION : 1.2v
+# CONTACT : mohamedidris45@yahoo.com
 
 #install basic software
 

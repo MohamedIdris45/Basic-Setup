@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# Authour : Mohamed Idris
-# Version : 1.1
+# AUTHOR : Mohamed Idris
+# VERSION : 1.1v
+# CONTACT : mohamedidris45@yahoo.com
 
 echo"##################################################################################"
 echo""
