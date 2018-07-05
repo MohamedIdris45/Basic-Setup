@@ -7,11 +7,13 @@ This Script has been Tested in Ubuntu and Redhat (rpm like CentOS,Fedora) packag
 STEPS:
 
 1. In your Cloud or local System download the script using 
+
       * git clone https://github.com/MohamedIdris45/Basic-Setup.git
-      * cd Basic-Setup
+      * cd Basic-Setup/LAMP/
       * bash LAMP.sh (run as root)
       
 2. Software Installed and allowd in firewall
+      
       * APACHE
       * Mariadb for .rpm distros
       * Mysql for ubuntu distros

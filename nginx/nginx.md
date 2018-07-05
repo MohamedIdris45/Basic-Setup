@@ -11,7 +11,7 @@ STEPS :
 
 		* yum install git
 		* git clone https://github.com/MohamedIdris45/Basic-Setup.git
-		* cd Basic-Setup
+		* cd Basic-Setup/nginx
 		* bash nginx.sh (root permission)
 	
 	2. This script install nginx latest version

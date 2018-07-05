@@ -12,7 +12,7 @@ STEPS:
 1. Download script in your Cloud Linux by following ways, 
 	* yum install git
 	* git clone https://github.com/MohamedIdris45/Basic-Setup.git
-	* cd Basic-Setup
+	* cd Basic-Setup/Basic/
 	* bash Basic.sh (with root)
 	
 2. Run the Script with root Permission.

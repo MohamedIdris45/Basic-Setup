@@ -17,7 +17,7 @@ STEP:
 	3. Download my git repo by
 		* git clone https://github.com/MohamedIdris45/Basic-Setup
 
-	4. cd /Basic-Setup
+	4. cd /Basic-Setup/FTP/
 	
 	5. bash FTP.sh
 		* Vsftpd installed as FTP server
