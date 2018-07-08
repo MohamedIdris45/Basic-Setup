@@ -4,6 +4,7 @@
 # VERSION : 1.1v
 # CONTACT : mohamedidris45@yahoo.com
 
+echo ""
 echo"##################################################################################"
 echo""
 echo""
@@ -30,12 +31,12 @@ if [ "$yes" == "$x" ];then
 
 	if [ "$y" == "$z" ];then
 
-		echo"##################################################################################"
-		echo"###################### WE HAVE DETECTED YOUR SYSTEM AS $y ########################"
-       		echo"##################################################################################" 
+		echo"###################################################################################"
+		echo"####################### WE HAVE DETECTED YOUR SYSTEM AS $y ########################"
+       		echo"###################################################################################" 
         	echo"##########################  INSTALLING NGINX IN CENTOS ############################"
         	echo"#############  KINDLY READ Nginx.md TO GET KNOWLEDGE ABOUT THIS SCRIPT ############"
-        	echo"##################################################################################"
+        	echo"###################################################################################"
 
 		
 		#INSTALLING NGINX
@@ -141,16 +142,18 @@ if [ "$yes" == "$x" ];then
 	
 	else
 	
-		echo"##################################################################################"
-        	echo"###################### WE HAVE DETECTED YOUR SYSTEM AS UBUNTU ####################"
-        	echo"##################################################################################" 
+		echo"###################################################################################"
+        	echo"####################### WE HAVE DETECTED YOUR SYSTEM AS UBUNTU ####################"
+        	echo"###################################################################################" 
         	echo"##########################  INSTALLING NGINX IN UBUNTU ############################"
         	echo"#############  KINDLY READ Nginx.md TO GET KNOWLEDGE ABOUT THIS SCRIPT ############"
-        	echo"##################################################################################"
+        	echo"###################################################################################"
 
 		#INSTALLING NGINX
 
                 apt-get install nginx -y
+		
+		#STARTING NGINX
 
                 systemctl start nginx
                 systemctl enable nginx
@@ -168,6 +171,9 @@ if [ "$yes" == "$x" ];then
 
 
 			if [ -n "$tes" ]; then
+
+				rm -rvf /etc/nginx/sites-available/*
+				rm -rvf /etc/nginx/sites-enabled/*
 
 	         		mkdir -p /var/www/$web/html
                         	touch /var/www/$web/html/index.html
@@ -194,6 +200,7 @@ if [ "$yes" == "$x" ];then
                         	<h3> CONTACT (or) FEEDBACK :  mohamedidris45@yahoo.com </h3>" >> /var/www/$web/html/index.html
 
                         	ufw allow ssh
+				ufw allow 20/tcp
                         	ufw allow http
                         	ufw allow https
                         	ufw allow 443/tcp
@@ -205,8 +212,8 @@ if [ "$yes" == "$x" ];then
 
 				echo"#######################################################################################"
 		                echo"################################## END OF SCRIPT ######################################"
-               		        echo"######## IN YOUR WEB BROWSER CHECK WEB-SERVER  ARE WORKING FINE BY TYPING  #####"
-                		echo"######### http://IPADDRESS (WEBSERVER): http://IPADDRESS  ####################"
+               		        echo"########### IN YOUR WEB BROWSER CHECK WEB-SERVER  ARE WORKING FINE BY TYPING  #########"
+                		echo"######################### http://IPADDRESS (WEBSERVER) ################################"
                 		echo"#######################################################################################"
                 		echo"#################### FEEDBACK CONTACT mohamedidris45@yahoo.com ########################"
                 		echo"#######################################################################################"
@@ -227,6 +234,3 @@ else
 	echo "#####################  Kindly READ THE MANUAL LAMP.sh  ##################################"
 
 fi
-	
-
-
