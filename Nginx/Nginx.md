@@ -1,9 +1,9 @@
-This simple script is used to install nginx in .rpm (Redhat, Fedora, CentOS) Distros 
+This simple script is used to install nginx in .rpm (Redhat, Fedora, CentOS) & UBUNTU Distros 
 
 CAUTION :
 
-	* Don't use this script with other then .rpm distros
-	* This script tested in Centos 7 
+	* Don't use this script with other then .rpm and ubuntu distros
+	* This script tested in CentOS 7 and UBUNTU
 
 STEPS :
 
