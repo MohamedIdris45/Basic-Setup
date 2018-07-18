@@ -99,7 +99,7 @@ firewall-cmd --reload
 
 echo "############################################################################################"
 echo "########################  FTP HAS BEEN INSTALLED SUCCESSFULLY ##############################"
-echo "######## CONNECT FTP USING USERNAME AND PASSWORD YOU PRIVIDED ALONG WITH PORT NUMBER #######"
+echo "######## CONNECT FTP USING USERNAME AND PASSWORD YOU PROVIDED ALONG WITH PORT NUMBER #######"
 echo "############################################################################################"
 
 
