@@ -89,6 +89,6 @@ if [ "$yes" == "$x" ];then
 	reboot +5
 
 else 
-	echo "Kindle Read the manual README.md before installaion"
+	echo "Kindle Read the manual Basic.md before installaion"
 	exit 2
 fi
