@@ -16,6 +16,10 @@ STEPS :
 	
 	2. This script install nginx latest version
 
+		mention your domain name when script prompts
+
+		Note: Domain should be provided as  eg. example.com, example.live
+
 	3. To Test Nginx webserver working or not by 
 		
 		* typing your ip address in web-browser

@@ -69,10 +69,10 @@ if [ "$yes" == "$x" ];then
                 do
 
 	                echo ""
-                        echo "#############  ENTER YOU WEBSITE NAME WITHOUT (WWW & .COM)  ##############"
+                        echo "#############  ENTER YOU DOMAIN NAME WITHOUT (WWW)  ##############"
                         echo ""
 
-                        read -p "Enter your Website name without [www] & [.com]: " web
+                        read -p "Enter your domain name without [www]: " web
 
                         tes="$web"
 			
@@ -84,7 +84,7 @@ if [ "$yes" == "$x" ];then
                                 touch /etc/nginx/sites-available/$web.conf
 
 
-                                mkdir -p /var/www/$web.com/html
+                                mkdir -p /var/www/$web/html
 
                                 semanage fcontext -a -t httpd_sys_content_t "web(/.*)?"
 
@@ -93,10 +93,10 @@ if [ "$yes" == "$x" ];then
                                 echo "server {
                                         listen  80;
 
-                                        server_name $web.com www.$web.com;
+                                        server_name $web www.$web;
 
                                         location / {
-                                                root  /var/www/$web.com/html;
+                                                root  /var/www/$web/html;
                                                 index  index.html index.htm;
                                                 try_files \$uri \$uri/ =404;
                                         }
@@ -109,11 +109,11 @@ if [ "$yes" == "$x" ];then
 
                                 ln -s /etc/nginx/sites-available/$web.conf /etc/nginx/sites-enabled/
 
-                                touch /var/www/$web.com/html/index.html
+                                touch /var/www/$web/html/index.html
 
 				echo "<h1> NGINX IS WORKING !!! </h1>
                                 <h2> KINDLY MOVE YOUR HTML DIRECTORY TO /Var/www/$web/html to host </h2>
-                                <h3> CONTACT (or) FEEDBACK :  mohamedidris45@yahoo.com </h3>" >> /var/www/$web.com/html/index.html
+                                <h3> CONTACT (or) FEEDBACK :  mohamedidris45@yahoo.com </h3>" >> /var/www/$web/html/index.html
 
                                 systemctl restart nginx
 
@@ -161,11 +161,11 @@ if [ "$yes" == "$x" ];then
 		while :
                 do
                         echo ""
-                        echo "#############  ENTER YOU WEBSITE NAME WITHOUT (WWW & .COM)  ##############"
+                        echo "#############  ENTER YOU DOMAIN NAME WITHOUT (WWW)  ##############"
                         echo ""
 
 
-                	read -p "Enter you Website name without [www] or [.com] : " web
+                	read -p "Enter you domain name without [www] : " web
 
                 	tes="$web"
 
@@ -185,7 +185,7 @@ if [ "$yes" == "$x" ];then
                                 	root /var/www/$web/html;
                                 	index index.html index.htm;
 
-                                	server_name $web.com www.$web.com;
+                                	server_name $web www.$web;
 
                                 	location / {
                                         	try_files \$uri \$uri/ =404;
